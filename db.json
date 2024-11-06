@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "A green door",
+      "price": 12.5
+    },
+    {
+      "id": "ea81",
+      "name": "test",
+      "price": 6
+    },
+    {
+      "id": "e3b2",
+      "name": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPcWdjUUlzV1lUQjVMM014ZV92WjR1a0ZjUDdTbkVwdEpiaVRDYndlbGlBIn0.eyJleHAiOjE3MTg2MTkxNTAsImlhdCI6MTcxODYxODI1MCwiYXV0aF90aW1lIjoxNzE4NjE4MjUwLCJqdGkiOiI4MzA1OGMxYi0xODkzLTQxNzYtYjY0Ny01ZWMzZGUxNjZhYTYiLCJpc3MiOiJodHRwOi8vc2xhenZlaWxsZTE0MC5mcmFuY2VjZW50cmFsLmNsb3VkYXBwLmF6dXJlLmNvbTo4MDg1L3JlYWxtcy92ZWlsbGVzYW4tcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNGVlMzkyZmEtZjBmMC00NWUyLTkxMGYtOTNiYjM1Yjk0ODg1IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoidmVpbGxlc2FuLXJlc291cmNlLXNlcnZlciIsIm5vbmNlIjoiTW5oSmNuRnpSbTVQU210WGVGSk5XVXRDVUUxd1ZYRktUbTk0VjBkMVNUZFVXWFZhY1hsVU4yRndUalZIIiwic2Vzc2lvbl9zdGF0ZSI6Ijk1OGM1N2Q3LWMzMTktNDQ4OC04YjU4LWVjYWY5MWNkMWJiNCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy12ZWlsbGVzYW4tcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCBvZmZsaW5lX2FjY2VzcyIsInNpZCI6Ijk1OGM1N2Q3LWMzMTktNDQ4OC04YjU4LWVjYWY5MWNkMWJiNCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkFsYWluIEJvdWRhcmQiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhYm91ZGFyZCIsImdpdmVuX25hbWUiOiJBbGFpbiIsImZhbWlseV9uYW1lIjoiQm91ZGFyZCIsImVtYWlsIjoiYWxhaW4uYm91ZGFyZEBzb3ByYXN0ZXJpYS5jb20ifQ.LYumT3WGa3Qk9K-3V2Yk89vWRjf5oUyqr5QmcRw44tAjQU7wxkFa7GrwXbTS7Ug1OhCK07Ikzc3S6EHZOfTw8VIElBZ6PpZ-aJHHKyzd5HNBuCxymyA75IaxOXn0fD6Z_st0eIxTe8ZfFJ8sRRD_EUSt0VKfoccCJJEU-WNd1fnqj0t0K1USAdKPk4wyIU3IXPHayMe8V4DCrRmZWGzHEprx_e6uYo2JnbufJiK0GdvbkCOxeV4mLWxUczWqRpk5jNkgBn4IfpeEjnKfwouQ9vTdNn6jCnxa2jS30B0n_skY7cyYL4-XmZaXhP-8kFktHJenIocBU60y7t4Oc6_AbA",
+      "price": 6
+    }
+  ]
+}
