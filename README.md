@@ -27,7 +27,9 @@ Examples:
 
 Protect your cookies from javascript access by setting the `HttpOnly` flag on the server side.
 
-A cookie with the Secure attribute is only sent to the server with an encrypted request over the HTTPS protocol
+A cookie with the `Secure` attribute is only sent to the server with an encrypted request over the HTTPS protocol.
+
+The `SameSite` attribute can be set to `Strict` or `Lax` to prevent CSRF attacks.
 
 ![Local cookies with httpOnly flag](doc_cookies.png)
 

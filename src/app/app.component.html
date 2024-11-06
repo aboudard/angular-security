@@ -2,5 +2,8 @@
   <h1>{{title}}</h1>
   <app-header [(name)]="appname"></app-header>
   <div [innerHTML]="bypassedname()"></div>
+  <div>
+    <button (click)="setCookie()">Cookie</button>
+  </div>
 </div>
 

